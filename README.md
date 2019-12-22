@@ -1,5 +1,7 @@
 # Experiment with Vuepress
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/visjs/experiment-vuepress.svg)](https://greenkeeper.io/)
+
 See <https://thomaash.github.io/experiment-vuepress/documentation/>.
 
 ## License
