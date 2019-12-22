@@ -1,0 +1,22 @@
+{
+  "name": "experiment-vuepress",
+  "version": "0.0.0-no-version",
+  "description": "This is just an experiment with different documentation engine.",
+  "homepage": "http://visjs.org/",
+  "license": "(Apache-2.0 OR MIT)",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/visjs"
+  },
+  "scripts": {
+    "docs:build": "vuepress build vuepress",
+    "docs:dev": "vuepress dev vuepress"
+  },
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/visjs"
+  }
+}

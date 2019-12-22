@@ -1,0 +1,12 @@
+# npm files
+node_modules
+npm-debug.log
+vis-data-*.tgz
+
+# ide or system files
+.idea
+.c9
+*.iml
+.project
+.settings/
+.directory
