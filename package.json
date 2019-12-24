@@ -4,6 +4,10 @@
   "description": "This is just an experiment with different documentation engine.",
   "homepage": "http://visjs.org/",
   "license": "(Apache-2.0 OR MIT)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visjs/experiment-vuepress.git"
+  },
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/visjs"
@@ -13,7 +17,8 @@
     "docs:dev": "vuepress dev vuepress"
   },
   "devDependencies": {
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-element-tabs": "^0.1.8"
   },
   "collective": {
     "type": "opencollective",

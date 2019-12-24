@@ -2,14 +2,41 @@ module.exports = {
   base: "/experiment-vuepress/documentation/",
   dest: "./documentation/",
 
-  plugins: ["vuepress-plugin-element-tabs"],
-
   themeConfig: {
+    nav: [
+      { text: "Vis.js", link: "https://visjs.org/" },
+      { text: "Guide", link: "/guide/" },
+      {
+        text: "All Projects",
+        ariaLabel: "All Projects Menu",
+        items: [
+          {
+            text: "Vis Data",
+            link: "https://visjs.github.io/vis-data/data/"
+          },
+          {
+            text: "Vis Graph2D",
+            link: "https://visjs.github.io/vis-timeline/docs/graph2d/"
+          },
+          {
+            text: "Vis Graph3D",
+            link: "https://visjs.github.io/vis-graph3d/docs/graph3d/"
+          },
+          {
+            text: "Vis Network",
+            link: "https://visjs.github.io/vis-network/docs/network/"
+          },
+          {
+            text: "Vis Timeline",
+            link: "https://visjs.github.io/vis-timeline/docs/timeline/"
+          }
+        ]
+      }
+    ],
+    sidebar: ["/guide/data-view/", "/guide/data-set/", "/guide/data-pipe/"],
     displayAllHeaders: true,
-    sidebarDepth: 3,
 
     locales: {
-      // English
       "/": {
         // text for the language dropdown
         selectText: "Languages",
@@ -26,19 +53,26 @@ module.exports = {
             buttonText: "Refresh"
           }
         },
-        // the navigation buttons at the top of the page
+        // algolia docsearch options for current locale
+        algolia: {}
+      },
+      "/cs-CZ/": {
+        selectText: "Jazyky",
+        label: "Čeština",
+        editLinkText: "Upravit tuto stránku na GitHubu",
+        serviceWorker: {
+          updatePopup: {
+            message: "Novej obsah je k dispozici.",
+            buttonText: "Obnovit"
+          }
+        },
         nav: [
-          { text: "Guide", link: "/guide/" },
-          // { text: "Examples", link: "/../examples/" },
+          { text: "Vis.js", link: "https://visjs.org/" },
+          { text: "Příručka", link: "/cs-CZ/guide/" },
           {
-            text: "GitHub",
-            link: require("../../package.json").repository.url
-          },
-          {
-            text: "All Projects",
-            ariaLabel: "All Projects Menu",
+            text: "Všechny projekty",
+            ariaLabel: "Menu všech projektů",
             items: [
-              { text: "Vis.js", link: "https://visjs.org/" },
               {
                 text: "Vis Data",
                 link: "https://visjs.github.io/vis-data/data/"
@@ -62,14 +96,12 @@ module.exports = {
             ]
           }
         ],
-        // sidebar links on the left (all heading will be automatically included)
+        algolia: {},
         sidebar: [
-          { title: "Data Set", path: "/guide/data-set/", collapsable: true },
-          { title: "Data View", path: "/guide/data-view/", collapsable: true },
-          { title: "Data Pipe", path: "/guide/data-pipe/", collapsable: true }
-        ],
-        // algolia docsearch options for current locale
-        algolia: {}
+          "/cs-CZ/guide/data-view/",
+          "/cs-CZ/guide/data-set/",
+          "/cs-CZ/guide/data-pipe/"
+        ]
       }
     }
   },
@@ -82,6 +114,12 @@ module.exports = {
       title: "Vis Data",
       description:
         "The home of Data Set and Data View among other data related tools."
+    },
+    "/cs-CZ/": {
+      lang: "cs-CZ",
+      title: "Vis Data",
+      description:
+        "Projekt obsahující Data Set, Data View a další nástroje pro práci s datama."
     }
   }
 };
